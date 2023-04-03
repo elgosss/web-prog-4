@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Задание 2</title>
+    </head>
+    <body>
+        <div id="main_2">
+            <script>
+                "use strict";
+                let a = new Array();
+                document.write('<p>1) Одномерный массив (рандомная генерация значений массива): <br>');
+                for (let i = 0; i < 15; i++) {
+                    a[i] = Math.floor(Math.random() * 15);
+                    document.write(a[i] + '&nbsp&nbsp');
+                }
+                document.write('</p>');
+                let a_max = a[0];
+                let index = 0;
+                document.write('<p>2) Найти максимальный элемент, присвоить его значение последнему элементу массива, а вместо максимального число записать -1: <br>');
+                for (let i = 1; i < 15; i++) {
+                    if (a[i] > a_max) {
+                        a_max = a[i];
+                        index = i;
+                    }
+                }
+                a[a.length - 1] = a_max;
+                a[index] = -1;
+                for (let i = 0; i < 15; i++) {
+                    document.write(a[i] + '&nbsp&nbsp');
+                }
+                document.write('</p>');
+            </script>
+        </div>
+    </body>
+</html>

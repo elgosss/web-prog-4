@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Задание 3</title>
+    </head>
+    <body>
+        <div id="main_3">
+            <script>
+                "use strict";
+                let x = parseInt(prompt('Введите X'));
+                let y = parseInt(prompt('Введите Y'));
+                const a = new Array();
+                let n = 15;
+                document.write('<p>1) Одномерный массив (рандомная генерация значений массива): <br>');
+                for (let i = 0; i < n; i++) {
+                    a[i] = Math.floor(Math.random() * 15) - 8;
+                    document.write(a[i] + '&nbsp&nbsp');
+                }
+                document.write('</p>');
+                const result_1 = a.reduce((count, item) => {
+                    if (item <= x || item > y) {
+                        count++;
+                        return count;
+                    }
+                    return count;
+                }, 0);
+                const result_2 = a.reduce((sum, item, index) => {
+                    if (index % 2 == 0) {
+                        if (item < 0) {
+                            return sum + item;
+                        }
+                        return sum;
+                    }
+                    return sum;
+                }, 0);
+                document.write(`<p>2) Количество чисел, непринадлежащих промежутку (${x}, ${y}]: ${result_1}`);
+                document.write(`<br>Сумма отрицательных чисел, стоящих на четных местах: ${result_2}</p>`);
+            </script>
+        </div>
+    </body>
+</html>

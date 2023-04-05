@@ -10,6 +10,54 @@
                 "use strict";
                 let fruits = ['apple', 'pineapple', 'mango', 'melon', 'grape'];
                 let citrus = ['orange', 'lemon', 'lime'];
+                document.write('<p>Последовательно, в каждой отдельной строчке, вывести:</p>');
+                document.write('<p>а) массив fruits:<br>');
+                for (let item of fruits) {
+                    document.write(item + '<br>');
+                }
+                document.write('</p>');
+                document.write('<p>б) массив citrus:<br>');
+                for (let item of citrus) {
+                    document.write(item + '<br>');
+                }
+                document.write('</p>');
+                fruits.push(...citrus);
+                document.write('<p>в) объединенный массив fruits:<br>');
+                for (let item of fruits) {
+                    document.write(item + '<br>');
+                }
+                document.write('</p>');
+                fruits.splice(3, 0, 'pear', 'cherry', 'plum', 'raspberry', 'strawberry');
+                document.write('<p>г) массив fruits, в котором после mango вставлены: pear, cherry, plum, raspberry, strawberry:<br>');
+                for (let item of fruits) {
+                    document.write(item + '<br>');
+                }
+                document.write('</p>');
+                fruits.splice(fruits.length - 3, 3);
+                document.write('<p>д) массив fruits, в котором удалены последние 3 элемента:<br>');
+                for (let item of fruits) {
+                    document.write(item + '<br>');
+                }
+                document.write('</p>');
+                fruits = fruits.sort();
+                document.write('<p>е) отсортированный в алфавитном порядке массив fruits:<br>');
+                for (let item of fruits) {
+                    document.write(item + '<br>');
+                }
+                document.write('</p>');
+                document.write('<p>ж) массив fruit в обратном алфавитном порядке:<br>');
+                for (let i = -1; i >= -fruits.length; i--) {
+                    document.write(fruits.at(i) + '<br>');
+                }
+                document.write('</p>');
+                fruits.sort((item1, item2) => {
+                    return item1.length - item2.length;
+                });
+                document.write('<p>з) массив fruit, отсортированный по длине слов:<br>');
+                for (let item of fruits) {
+                    document.write(item + '<br>');
+                }
+                document.write('</p>');
             </script>
         </div>
     </body>

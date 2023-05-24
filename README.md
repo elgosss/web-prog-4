@@ -1,2 +1,1 @@
-# web-prog-4
-Работа с массивами в JavaScript
+# Работа с массивами в JavaScript
